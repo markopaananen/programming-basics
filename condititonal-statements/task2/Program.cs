@@ -17,22 +17,15 @@ namespace task2
             int evaluteNumber;
             evaluteNumber = int.Parse(uservalue);
 
-            // compare value
-                        // if > 0
-            if(evaluteNumber > 0)
+            // % 2 true or false
+            
+            if((evaluteNumber % 2) == 0) 
             {
-                Console.WriteLine("Number [0] greater than 0", evaluteNumber );
+                Console.WriteLine("Number {0} is even", evaluteNumber);
             }
-            // if < 0
-            if (evaluteNumber < 0)
+            else if ((evaluteNumber % 2) == 1) 
             {
-                Console.WriteLine("Number [0] less than 0", evaluteNumber);
-            }
-
-            // if == 0
-            else
-             {
-                Console.WriteLine("Number [0] equal than 0", evaluteNumber);
+                Console.WriteLine("Number {0} is odd 0", evaluteNumber);
             }
 
             // wait
