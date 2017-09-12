@@ -21,18 +21,18 @@ namespace Task1
             // if > 0
             if (evaluteNumber > 0)
             {
-                Console.WriteLine("Number [0] greater than 0", evaluteNumber);
+                Console.WriteLine("Number [0] is positive", evaluteNumber);
             }
             // if < 0
             if (evaluteNumber < 0)
             {
-                Console.WriteLine("Number [0] less than 0", evaluteNumber);
+                Console.WriteLine("Number [0] is negative", evaluteNumber);
             }
 
             // if == 0
             else
             {
-                Console.WriteLine("Number [0] equal than 0", evaluteNumber);
+                Console.WriteLine("Number [0] equals 0", evaluteNumber);
             }
 
             // wait

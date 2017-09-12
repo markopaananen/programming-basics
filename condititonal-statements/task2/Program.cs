@@ -18,7 +18,7 @@ namespace task2
             evaluteNumber = int.Parse(uservalue);
 
             // compare value
-            // if > 0
+                        // if > 0
             if(evaluteNumber > 0)
             {
                 Console.WriteLine("Number [0] greater than 0", evaluteNumber );
