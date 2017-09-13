@@ -1,42 +1,67 @@
 ﻿using System;
 
-namespace task4
+namespace task4 
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int num1, num2, num3;
-            Console.Write("\n\n");
-            Console.Write("Find the largest of three numbers:\n");
-            Console.Write("------------------------------------");
-            Console.Write("\n\n");
-            Console.ReadKey();
+            string x, y, z;
+            int a, b, c;
 
             Console.Write("Input the 1st number :");
-            num1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Input the  2nd number :");
-            num2 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Input the 3rd  number :");
-            num3 = Convert.ToInt32(Console.ReadLine());
+            x = Console.ReadLine();
+            a = int.Parse(x);
 
-            if (num1 > num2)
+
+            Console.Write("Input the 2nd number :");
+            y = Console.ReadLine();
+            b = int.Parse(y);
+
+            Console.Write("Input the 3rd  number :");
+            z = Console.ReadLine();
+            c = int.Parse(z);
+
+            Console.ReadKey();
+
+            if ((a > b) && (a > c))
             {
-                if (num1 > num3)
+                if (b > c)
                 {
-                    Console.Write("The 1st Number is the greatest among three. \n\n");
+                    Console.WriteLine("{0} {1} {2}", a, b, c);
                 }
                 else
                 {
-                    Console.Write("The 3rd Number is the greatest among three. \n\n");
+                    Console.WriteLine("{0} {1} {2}", a, c, b);
                 }
             }
-            else if (num2 > num3)
-                Console.Write("The 2nd Number is the greatest among three \n\n");
-            else
-                Console.Write("The 3rd Number is the greatest among three \n\n");
+            else if ((b > a) && (b > c))
+            {
+                if (a > c)
+                {
+                    Console.WriteLine("{0} {1} {2}", b, a, c);
+                }
+                else
+                {
+                    Console.WriteLine("{0} {1} {2}", b, c, a);
+                }
+            }
+            else if ((c > a) && (c > b))
+            {
+                if (a > b)
+                {
+                    Console.WriteLine("{0} {1} {2}", c, a, b);
+                }
+                else
+                {
+                    Console.WriteLine("{0} {1} {2}", c, b, a);
 
-            Console.ReadKey();
+                }
+
+            }
+
         }
+
+
     }
 }
