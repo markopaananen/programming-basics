@@ -6,6 +6,11 @@ namespace task4
     {
         static void Main(string[] args)
         {
+            Console.Write("\n\n");
+            Console.Write("Sort three numbers:\n");
+            Console.Write("------------------------------------");
+            Console.Write("\n\n");
+
             string x, y, z;
             int a, b, c;
 
@@ -57,8 +62,11 @@ namespace task4
                     Console.WriteLine("{0} {1} {2}", c, b, a);
 
                 }
-
             }
+            Console.Write("\n\n");
+            Console.Write("------------------------------------");
+            Console.Write("\n\n");
+            Console.Write("\n\n");
 
         }
 
