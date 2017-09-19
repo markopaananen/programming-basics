@@ -36,6 +36,21 @@ namespace task5
             Console.WriteLine(writeLine, countNumber, result, evenResult, oddResult);
             Console.Write("\n Press any key to continue...");
             Console.ReadKey();
+
+            // Random 1 - 100
+            Random rnd = new Random();
+            for (int j = 0; j <= 100; j++)
+            {
+                rnd.NextDouble();
+                Console.WriteLine("Random number {0} is: {1}", j, rnd.Next(100));
+            }
+            Console.Write("\n Press any key to continue...");
+            Console.ReadKey();
+
+
+
+
+
         }
     }
 }
