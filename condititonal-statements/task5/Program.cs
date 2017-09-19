@@ -6,98 +6,110 @@ namespace task5
     {
         static void Main(string[] args)
         {
-            Console.Write("\n\n");
-            Console.Write("Ticket pricing:\n");
-            Console.Write("------------------------------------");
-            Console.Write("\n\n");
+            // Prompt user for input
+            Console.Write("How old are you (1-99): ");
 
-            // ask user information
-            string age, price, student, mtk, soldier;
-            int ag, pr, st, mt, so;
+            // Store user input to a variable
+            string userInput1 = Console.ReadLine().ToString();
 
-            
-            Console.WriteLine("How old you are: ");
-            age = Console.ReadLine();
-            ag = int.Parse(age);
-            Console.WriteLine("Are you student 1=yes, 0=no: ");
-            student = Console.ReadLine();
-            st = int.Parse(student);
-            Console.WriteLine("Are you member of MTK 1=yes, 0=no: ");
-            mtk = Console.ReadLine();
-            mt = int.Parse(mtk);
-            Console.WriteLine("Are you soldier 1=yes, 0=no: ");
-            soldier = Console.ReadLine();
-            so = int.Parse(soldier);
+            // Declare variables
 
-            // set ticketprice
-            pr = 16;
+            double discountPercent = 0;
+            double discountPercent2 = 0;
+            double initialPrice = 16;
+            double price;
+            int mtkFlag = 0;
 
+            // Parse user input into integer. If user 
+            int.TryParse(userInput1, out int age);
+            Console.Write("\n Your are {0} years old\n", age);
 
-            // Count ticketprice
-
-
-            if (st == 0 && mt == 0 && so == 0)
+            // If age is under 7 years...
+            if (age < 7)
             {
-                if (ag < 7)
+                // ...set the discount percentage to 100 % and move on to price calculation
+                discountPercent = 1;
+
+            }
+            else if (age < 16 | age > 64)
+            {
+                // Else if age is between 7 and 15 or over 64, set the discount percentage to 50 % and move on to price calculation
+                discountPercent = 0.5;
+            }
+            else
+            {
+                // Else if age is between 16 and 64...
+                // Prompt user for input (k/e)
+                Console.Write("\n Are you member of MTK (y/n)? ");
+
+                // Store user input to a variable
+                var userInput = Console.ReadKey();
+
+                // If user input indicated that they are an MTK member...
+                if (userInput.Key == ConsoleKey.Y)
                 {
-                    Console.Write("Yuo have free ticket!");
-                    Console.ReadKey();
+                    // ...set the discount percentage to 45 % and raise a flag for calculating a combined discount percentage with MTK membership
+                    discountPercent = 0.15;
+                    mtkFlag = 1;
                 }
-                else if (ag > 15 && ag < 65)
+
+                // Prompt user for input (k/e)
+                Console.Write("\n Are you student (Y/N)? ");
+
+                // Store user input to a variable
+                userInput = Console.ReadKey();
+
+                // If user input indicated that they are a student...
+                if (userInput.Key == ConsoleKey.Y)
+
                 {
-                    Console.Write("Yuo have normal  ticketprice! 16 Euros ");
-                    Console.ReadKey();
+                    // ...and an MTK member
+                    if (mtkFlag == 1)
+                    {
+                        // ...set the first discount percentage to 45 % and the second discount percentage to 15 %
+                        discountPercent = 0.45;
+                        discountPercent2 = 0.15;
+                    }
+                    else
+                    {
+                        // ...set the discount percentage to 45 %
+                        discountPercent = 0.45;
+                    }
+                }
+
+                // Prompt user for input (k/e)
+                Console.Write("\n Are you an soldier (Y/N)? ");
+                // Store user input to a variable
+                userInput = Console.ReadKey();
+
+                // If user input indicated that they are enlisted for army...
+                if (userInput.Key == ConsoleKey.Y)
+                {
+                    // ...set the discount percentage to 50 % and clear the second discount percentage
+                    discountPercent = 0.50;
+                    discountPercent2 = 0;
                 }
             }
-            if ((ag > 6 && ag < 15) || (ag > 65) || (so == 1))
-            {
-                Console.Write("Yuo have 50% discount ticketprice! 8 Euros ");
-                Console.ReadKey();
-            }
-            if ((st == 1) && (mt == 1))
-            {
-                Console.Write("Yuo have 60% discount ticketprice! 6,4 Euros ");
-                Console.ReadKey();
-            }
+
+            // Calculate the price after the first discount percentage
+            price = initialPrice - (initialPrice * discountPercent);
+
+            // Calculate the price after the second discount percentage
+            price = price - (price * discountPercent2);
+
+            // Inform the user of the price
+            Console.WriteLine("\n\n Your ticket price is {0} euros", price);
 
 
 
+            // Wait for any key to be pressed before exiting
 
-            //// free
-            //if ((ag < 7) || (so == 0) || (mt == 0) || (st == 0));
-            //{
-            //    Console.Write("Yuo have free ticket!");
-            //    Console.ReadKey();
-            //}
+            Console.WriteLine("\n Press any key to continue...");
 
-            //// TicketPrice - 60%
-            //if ((mt == 1) && (st == 1))
-            //{
-            //    Console.Write("Yuo have 60% discount ticketprice! 7,2 Euros ");
-            //    Console.ReadKey();
-            //}
-
-            //// TicketPrice - 50%
-            //if ((ag > 6) && (ag < 17) || (ag > 64) || (so == 1))
-            //{
-            //    Console.Write("Yuo have 50% discount ticketprice! 8 Euros ");
-            //    Console.ReadKey();
-            //}
-
-            //// TicketPrice - 45%
-            //if (so == 1)            {
-            //    Console.Write("Yuo have 45% discount ticketprice! 10,4 Euros ");
-            //    Console.ReadKey();
-            //}
-
-            //// Normal TicketPrice 
-            //if ((ag > 16) && (ag <75) && (so == 0) && (mt == 0) && (st == 0))
-            //{
-            //    Console.Write("Yuo have normal  ticketprice! 16 Euros ");
-            //    Console.ReadKey();
-            //}
-
+            Console.ReadKey();
 
         }
+
     }
+
 }
