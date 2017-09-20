@@ -27,8 +27,6 @@ namespace task8
                     {
                         prtLine = prtLine + result;
                     }
-
-                    
                 }
                 Console.WriteLine(prtBegin,i + " "+ prtLine);
                 prtLine = "";
