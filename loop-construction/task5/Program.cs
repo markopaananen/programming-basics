@@ -46,11 +46,6 @@ namespace task5
             }
             Console.Write("\n Press any key to continue...");
             Console.ReadKey();
-
-
-
-
-
         }
     }
 }
