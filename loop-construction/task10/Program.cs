@@ -27,6 +27,7 @@ namespace task10
                 {
                     result = "2";
                 }
+
                 Console.WriteLine("Round {0} result {1} ", i, result);
             }
 
