@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "string-handling", "string-handling\string-handling.csproj", "{B4AA9736-2D9D-4F1B-B1B5-34D9AD5FC19C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "string-handling", "string-handling\string-handling.csproj", "{B4AA9736-2D9D-4F1B-B1B5-34D9AD5FC19C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1", "task1\task1.csproj", "{CF464AB4-288F-40AB-9C09-C380B950584A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task1", "task1\task1.csproj", "{CF464AB4-288F-40AB-9C09-C380B950584A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task2", "task2\task2.csproj", "{1D1D04E9-DEB7-496E-AF6F-4ECAC46E6876}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task2", "task2\task2.csproj", "{1D1D04E9-DEB7-496E-AF6F-4ECAC46E6876}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task3", "task3\task3.csproj", "{7AA6D543-2477-4194-BE4F-B376245A762F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task3", "task3\task3.csproj", "{7AA6D543-2477-4194-BE4F-B376245A762F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task4", "task4\task4.csproj", "{D6BABDE4-CBE8-4EFB-8049-E5629BDF5FD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task4", "task4\task4.csproj", "{D6BABDE4-CBE8-4EFB-8049-E5629BDF5FD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task5", "task5\task5.csproj", "{A248C7E1-8922-4299-9904-67723C083170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task5", "task5\task5.csproj", "{A248C7E1-8922-4299-9904-67723C083170}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskTesthandling6", "taskTesthandling6\taskTesthandling6.csproj", "{DCEE365D-F93E-4542-9BB9-7C939AE3C992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "taskTesthandling6", "taskTesthandling6\taskTesthandling6.csproj", "{DCEE365D-F93E-4542-9BB9-7C939AE3C992}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taskTesthandling7", "taskTesthandling7\taskTesthandling7.csproj", "{64D18C9B-8772-41CD-8CC0-AAEEC38B90CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{DCEE365D-F93E-4542-9BB9-7C939AE3C992}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCEE365D-F93E-4542-9BB9-7C939AE3C992}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCEE365D-F93E-4542-9BB9-7C939AE3C992}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D18C9B-8772-41CD-8CC0-AAEEC38B90CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D18C9B-8772-41CD-8CC0-AAEEC38B90CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D18C9B-8772-41CD-8CC0-AAEEC38B90CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D18C9B-8772-41CD-8CC0-AAEEC38B90CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
