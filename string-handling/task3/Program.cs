@@ -1,18 +1,29 @@
 ﻿using System;
 
-public class Example
+namespace task3
 {
-    public static void Main()
+    class Program
     {
-        String s = "aaaaabbbcccccccdd";
-        Char charRange = 'c';
-        int startIndex = s.IndexOf(charRange);
-        int endIndex = s.LastIndexOf(charRange);
-        int length = endIndex - startIndex + 1;
-        Console.WriteLine("{0}.Substring({1}, {2}) = {3}",
-                          s, startIndex, length,
-                          s.Substring(startIndex, length));
-        Console.ReadKey();
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World, count specific character!");
+            Console.WriteLine("----------------------------------------------------\n");
+            Console.WriteLine("Please let some random sentense here. \n");
+            string userInput = Console.ReadLine();
+            Console.WriteLine("Let character to count. \n");
+            string countedChar = Console.ReadLine();
+            int result = 0;
+
+            int inputLenght = userInput.Length;
+            for (int i = 0; i < inputLenght; i++)
+            {
+                if (userInput.Substring(i, 1) == countedChar)
+                {
+                    result = result + 1;
+                }
+            }
+            Console.WriteLine("{0} characters found.\n", result);
+            Console.ReadKey();
+        }
     }
 }
-
