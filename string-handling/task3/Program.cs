@@ -19,7 +19,8 @@ namespace task3
             {
                 if (userInput.Substring(i, 1) == countedChar)
                 {
-                    result = result + 1;
+                    //result = result + 1;
+                    result++;
                 }
             }
             Console.WriteLine("{0} characters found.\n", result);
