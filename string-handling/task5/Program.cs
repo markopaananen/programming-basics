@@ -17,7 +17,7 @@ namespace task5
             // Store matches between the user input and the regular expression
             MatchCollection matches = rx.Matches(userInput);
             // Print out the number of vowel occurrences in the user input 
-            Console.WriteLine("\nYour sentance contains {0} vovels", matches.Count);
+            Console.WriteLine("\nYour sentance contains {0} vovels.", matches.Count);
             // Wait for any key to be pressed before exiting
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
